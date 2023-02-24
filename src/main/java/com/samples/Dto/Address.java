@@ -1,4 +1,4 @@
-package com.samples.Samples;
+package com.samples.Dto;
 
 public class Address {
 	String block, city, state, country;

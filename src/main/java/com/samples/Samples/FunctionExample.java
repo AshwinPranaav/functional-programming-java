@@ -8,6 +8,9 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import com.samples.Dto.Person;
+import com.samples.Dto.PersonRepository;
+
 public class FunctionExample {
 
 	static void function() {

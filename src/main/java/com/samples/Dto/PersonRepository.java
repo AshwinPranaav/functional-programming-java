@@ -1,4 +1,4 @@
-package com.samples.Samples;
+package com.samples.Dto;
 
 import java.util.Arrays;
 import java.util.List;

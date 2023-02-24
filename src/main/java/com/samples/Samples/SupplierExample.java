@@ -3,6 +3,9 @@ package com.samples.Samples;
 import java.util.List;
 import java.util.function.Supplier;
 
+import com.samples.Dto.Person;
+import com.samples.Dto.PersonRepository;
+
 public class SupplierExample {
 
 	public static void supplier() {

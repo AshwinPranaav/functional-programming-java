@@ -4,6 +4,9 @@ import java.util.Comparator;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
+import com.samples.Dto.Person;
+import com.samples.Dto.PersonRepository;
+
 public class MethodReference {
 
 	public static int compare(Integer x, Integer y) {

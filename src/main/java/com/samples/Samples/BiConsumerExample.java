@@ -3,6 +3,9 @@ package com.samples.Samples;
 import java.util.List;
 import java.util.function.BiConsumer;
 
+import com.samples.Dto.Person;
+import com.samples.Dto.PersonRepository;
+
 public class BiConsumerExample {
 
 	static void biConsumerExample() {
