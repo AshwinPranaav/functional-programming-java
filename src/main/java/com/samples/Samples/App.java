@@ -6,5 +6,9 @@ public class App
 		String aws = "aws";
 		int integer = aws.indexOf("azure");
 		System.out.println(integer);
+		
+		String azure = "azure";
+		boolean equals = azure.equals("azure");
+		
 	}
 }
