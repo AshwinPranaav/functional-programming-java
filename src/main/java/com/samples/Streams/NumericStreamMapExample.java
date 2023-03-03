@@ -32,8 +32,9 @@ public class NumericStreamMapExample {
 	
 	static List<Integer> mapToObject() {
 		return IntStream.rangeClosed(1, 6)
-				.mapToObj(x -> x)  
-//				.boxed().map(x -> x)
+//				.mapToObj(x -> x)  
+//				.boxed()
+				.boxed().map(x -> x)
 				.collect(Collectors.toList());
 	}
 	
