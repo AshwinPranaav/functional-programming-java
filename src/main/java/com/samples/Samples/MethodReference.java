@@ -17,6 +17,14 @@ public class MethodReference {
 		return person.getHeight() >= 140;
 	}
 	
+	public boolean checkGenderisMale(Person person) {
+		return person.getGender().equals("Male");
+	}
+	
+	public boolean checkGenderisFemale(Person person) {
+		return person.getGender().equals("Female");
+	}
+	
 	public static void main(String[] args) {
 		Comparator<Integer> comp = MethodReference::compare;
 		System.out.println("App::compare : " + comp.compare(1, 10));
@@ -28,6 +36,14 @@ public class MethodReference {
 		
 		Predicate<Person> personPredicate = MethodReference::checkHeight;
 		System.out.println("Person predicate using method reference: " + personPredicate.test(PersonRepository.getPerson()));
+		
+		Predicate<Person> malePredicate = new MethodReference()::checkGenderisMale;
+		System.out.println("Male person: " + malePredicate.test(PersonRepository.getPerson()));
+		
+		MethodReference methodReference = new MethodReference();
+		
+		Predicate<Person> femalePredicate = methodReference::checkGenderisFemale;
+		System.out.println("Female person: " + femalePredicate.test(PersonRepository.getPerson()));
 	}
 
 }
