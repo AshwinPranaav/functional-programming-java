@@ -1,5 +1,6 @@
 package com.samples.Streams;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
@@ -29,6 +30,17 @@ public class StreamMapExample {
 		
 		List<Integer> eachFruitsLength = fruits.stream().map(String::length).collect(Collectors.toList());
 		System.out.println(eachFruitsLength);
+		
+		int[] integer = {1, 2, 3};
+		Arrays.
+		stream(integer) // returns IntStream
+		.map(x -> x) // returns IntStream
+		.boxed(); // returns Stream<Integer>
+		
+		List<Integer> list = new ArrayList<>();
+		list
+		.stream() // returns Stream<Integer>
+		.map(i -> i); //returns <Integer> Stream<Integer>
 		
 		System.out.println("List: " + toUpperCaseTransformList(PersonRepository.getAllPersons()));
 		System.out.println("Set: " + toUpperCaseTransformSet(PersonRepository.getAllPersons()));
