@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import com.samples.Dto.Person;
+import com.samples.Dto.PersonRepository;
+
 public class NumericStreamMapExample {
 
 	static double mapToDoubleSum() {
@@ -42,6 +45,9 @@ public class NumericStreamMapExample {
 		System.out.println("Map to Double sum: " + mapToDoubleSum());
 		System.out.println("Map to Long sum: " + mapToLongSum());
 		System.out.println("Map to Object: " + mapToObject());
+		
+		System.out.println(PersonRepository.getAllPersons().stream().map(Person::getHeight).collect(Collectors.toList()));
+		System.out.println(PersonRepository.getAllPersons().stream().mapToInt(Person::getHeight).boxed().collect(Collectors.toList()));
 	}
 
 }
