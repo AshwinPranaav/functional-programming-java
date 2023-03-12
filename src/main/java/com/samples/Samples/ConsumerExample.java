@@ -11,7 +11,7 @@ public class ConsumerExample {
 		Consumer<String> c2 = a -> System.out.println(a);
 		Consumer<String> consumer = alphabet -> {
 			if(alphabet.contains("a")) {
-				c1.andThen(c2).accept(alphabet);;
+				c1.andThen(c2).accept(alphabet);
 			}
 		};
 		alphabets.forEach(consumer);
